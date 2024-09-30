@@ -1,0 +1,4 @@
+/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim.dir
+/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir
