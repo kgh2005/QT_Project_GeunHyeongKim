@@ -142,6 +142,30 @@ QT_Project_GeunHyeongKim_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/build.make CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/build
 .PHONY : QT_Project_GeunHyeongKim_autogen/fast
 
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.o: QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.o
+
+# target to build an object file
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QT_Project_GeunHyeongKim.dir/build.make CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o
+
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.i: QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.i
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.i
+
+# target to preprocess a source file
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QT_Project_GeunHyeongKim.dir/build.make CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.i
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.i
+
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.s: QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.s
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.s
+
+# target to generate assembly for a file
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QT_Project_GeunHyeongKim.dir/build.make CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.s
+.PHONY : QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.s
+
 QT_Project_GeunHyeongKim_autogen/mocs_compilation.o: QT_Project_GeunHyeongKim_autogen/mocs_compilation.cpp.o
 .PHONY : QT_Project_GeunHyeongKim_autogen/mocs_compilation.o
 
@@ -224,6 +248,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... QT_Project_GeunHyeongKim_autogen"
 	@echo "... QT_Project_GeunHyeongKim"
+	@echo "... QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.o"
+	@echo "... QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.i"
+	@echo "... QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.s"
 	@echo "... QT_Project_GeunHyeongKim_autogen/mocs_compilation.o"
 	@echo "... QT_Project_GeunHyeongKim_autogen/mocs_compilation.i"
 	@echo "... QT_Project_GeunHyeongKim_autogen/mocs_compilation.s"

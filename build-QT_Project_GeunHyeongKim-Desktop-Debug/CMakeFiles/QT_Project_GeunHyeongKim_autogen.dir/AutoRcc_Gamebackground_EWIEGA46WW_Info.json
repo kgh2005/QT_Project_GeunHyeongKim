@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/QT_Project_GeunHyeongKim_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim",
+	"CMAKE_SOURCE_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim",
+	"INCLUDE_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/QT_Project_GeunHyeongKim_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/background.png"
+	],
+	"LOCK_FILE" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gamebackground_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "Gamebackground" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_Gamebackground.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gamebackground_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gamebackground.qrc",
+	"VERBOSITY" : 0
+}
