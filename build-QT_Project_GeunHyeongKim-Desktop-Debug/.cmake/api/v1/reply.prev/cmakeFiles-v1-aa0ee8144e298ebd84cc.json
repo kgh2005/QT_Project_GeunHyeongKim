@@ -262,6 +262,9 @@
 		},
 		{
 			"path" : "Gamebackground.qrc"
+		},
+		{
+			"path" : "Gameimage.qrc"
 		}
 	],
 	"kind" : "cmakeFiles",

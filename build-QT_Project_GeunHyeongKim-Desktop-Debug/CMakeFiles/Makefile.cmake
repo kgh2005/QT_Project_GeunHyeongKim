@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/CMakeLists.txt"
   "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gamebackground.qrc"
+  "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gameimage.qrc"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
@@ -78,6 +79,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutogenInfo.json"
   "CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gamebackground_EWIEGA46WW_Info.json"
+  "CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gameimage_EWIEGA46WW_Info.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

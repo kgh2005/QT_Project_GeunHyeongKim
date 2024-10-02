@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "QT_Project_GeunHyeongKim_autogen"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp.o.d"
+  "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp.o"
+  "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp.o.d"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/main.cpp.o"
@@ -13,6 +15,7 @@ file(REMOVE_RECURSE
   "QT_Project_GeunHyeongKim"
   "QT_Project_GeunHyeongKim.pdb"
   "QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp"
+  "QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

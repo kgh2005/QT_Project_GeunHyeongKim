@@ -67,7 +67,8 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake",
-		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gamebackground.qrc"
+		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gamebackground.qrc",
+		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/Gameimage.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim",
 	"DEP_FILE" : "",
