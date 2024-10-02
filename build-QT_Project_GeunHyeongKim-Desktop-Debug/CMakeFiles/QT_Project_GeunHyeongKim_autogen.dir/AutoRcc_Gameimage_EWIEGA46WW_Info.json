@@ -8,7 +8,8 @@
 	"INPUTS" : 
 	[
 		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/target.png",
-		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/logo.png"
+		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/logo.png",
+		"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/knife.png"
 	],
 	"LOCK_FILE" : "/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gameimage_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,

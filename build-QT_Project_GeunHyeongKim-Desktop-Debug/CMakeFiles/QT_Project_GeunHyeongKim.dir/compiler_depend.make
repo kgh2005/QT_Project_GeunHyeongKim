@@ -325,14 +325,14 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/QT_Project_GeunHyeongKim_autogen/mocs_co
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
 
 CMakeFiles/QT_Project_GeunHyeongKim.dir/main.cpp.o: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/main.cpp \
   /usr/include/stdc-predef.h \
@@ -651,14 +651,14 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/main.cpp.o: /home/kgh/GITHUB/QT_Project_
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -666,7 +666,22 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/main.cpp.o: /home/kgh/GITHUB/QT_Project_
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc
 
 CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/mainwindow.cpp \
   /usr/include/stdc-predef.h \
@@ -985,14 +1000,14 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   QT_Project_GeunHyeongKim_autogen/include/ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -1043,8 +1058,37 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h \
+  /usr/include/c++/11/random \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
+  /usr/include/c++/11/bits/random.tcc
 
+
+/usr/include/c++/11/bits/random.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/c++/11/random:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider:
 
@@ -1084,7 +1128,29 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView:
 
+/usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/c++/11/bits/ostream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/11/cwctype:
+
+/usr/include/c++/11/ostream:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/c++/11/iostream:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h:
 
@@ -1096,8 +1162,6 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
-
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h:
@@ -1105,6 +1169,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h:
 
@@ -1135,6 +1201,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h:
 
@@ -1178,6 +1246,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h:
@@ -1210,6 +1280,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
+/usr/include/c++/11/cmath:
+
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
@@ -1238,6 +1310,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/wctype.h:
+
 /usr/include/sched.h:
 
 /usr/include/pthread.h:
@@ -1247,6 +1321,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 /usr/include/c++/11/numeric:
 
 /usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/c++/11/istream:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h:
 
@@ -1267,6 +1343,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -1302,6 +1380,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
+/usr/include/c++/11/bits/basic_ios.h:
+
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/cwchar:
@@ -1319,6 +1399,8 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/c++/11/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/c++/11/bits/postypes.h:
 
@@ -1428,6 +1510,8 @@ QT_Project_GeunHyeongKim_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -1504,6 +1588,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+/usr/include/math.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/11/bits/std_function.h:
@@ -1525,6 +1611,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp:
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/bits/exception.h:
 
@@ -1646,6 +1734,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
+/usr/include/c++/11/bits/random.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/alloca.h:
@@ -1738,6 +1828,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp:
 
 /usr/include/ctype.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator:
+
 /usr/include/c++/11/bits/stream_iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
@@ -1772,6 +1864,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
+/usr/include/c++/11/ios:
+
 /usr/include/c++/11/utility:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
@@ -1791,6 +1885,8 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp:
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 QT_Project_GeunHyeongKim_autogen/include/ui_mainwindow.h:
 

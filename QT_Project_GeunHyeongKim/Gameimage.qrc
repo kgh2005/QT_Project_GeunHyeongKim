@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>image/logo.png</file>
         <file>image/target.png</file>
+        <file>image/knife.png</file>
     </qresource>
 </RCC>

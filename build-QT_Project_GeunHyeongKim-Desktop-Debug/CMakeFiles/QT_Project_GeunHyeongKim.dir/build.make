@@ -80,6 +80,7 @@ QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: /home/kgh/GITHUB/
 QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gameimage_EWIEGA46WW_Info.json
 QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/target.png
 QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/logo.png
+QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/image/knife.png
 QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gameimage.cpp: /usr/lib/qt5/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for Gameimage.qrc"
 	/usr/bin/cmake -E cmake_autorcc /home/kgh/GITHUB/QT_Project_GeunHyeongKim/build-QT_Project_GeunHyeongKim-Desktop-Debug/CMakeFiles/QT_Project_GeunHyeongKim_autogen.dir/AutoRcc_Gameimage_EWIEGA46WW_Info.json Debug
