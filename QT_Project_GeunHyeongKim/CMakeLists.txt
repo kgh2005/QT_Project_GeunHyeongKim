@@ -21,6 +21,7 @@ set(PROJECT_SOURCES
         mainwindow.ui
         Gamebackground.qrc
         Gameimage.qrc
+        player.h player.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

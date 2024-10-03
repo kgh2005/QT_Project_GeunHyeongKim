@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/main.cpp.o.d"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o"
   "CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/QT_Project_GeunHyeongKim.dir/player.cpp.o"
+  "CMakeFiles/QT_Project_GeunHyeongKim.dir/player.cpp.o.d"
   "QT_Project_GeunHyeongKim"
   "QT_Project_GeunHyeongKim.pdb"
   "QT_Project_GeunHyeongKim_autogen/EWIEGA46WW/qrc_Gamebackground.cpp"

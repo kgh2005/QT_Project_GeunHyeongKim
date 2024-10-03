@@ -258,6 +258,42 @@ background-color: rgb(7, 35, 61);</string>
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="SuccessFail">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>280</y>
+      <width>161</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25 25pt &quot;URW Bookman&quot;;
+color: rgb(255, 255, 255);
+background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ranking">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>510</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25 10pt &quot;URW Bookman&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(35, 31, 31);</string>
+    </property>
+    <property name="text">
+     <string>Ranking</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

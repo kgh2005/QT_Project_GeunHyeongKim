@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "player.h"
 #include <QRandomGenerator>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
     , isKnifeMoving(false) // Knife 애니메이션 상태
 {
     ui->setupUi(this);
+
+    playerName = "";
 
     // QTimer 초기화
     timer = new QTimer(this);
@@ -75,11 +79,15 @@ MainWindow::MainWindow(QWidget *parent)
     // 초기 상태에서 Wood와 Knife 이미지를 숨김
     ui->Wood->setVisible(false);
     ui->Knife_image->setVisible(false);
+    ui->Attack->setVisible(false);
 
     // Level QSlider 설정
     ui->Level->setRange(1, 5);  // 슬라이더 범위 설정
     ui->Level->setValue(1);  // 초기 값 설정
     connect(ui->Level, &QSlider::valueChanged, this, &MainWindow::updateLevelLabel);
+
+    // QLineEdit의 textEdited 시그널과 슬롯 연결
+    connect(ui->Name, &QLineEdit::textEdited, this, &MainWindow::on_lineEdit_textEdited);
 }
 
 MainWindow::~MainWindow()
@@ -94,10 +102,18 @@ void MainWindow::on_Startbutton_clicked()
         isMoving = true;  // 이동 중임을 표시
         timer->start(1);  // 1ms마다 moveViewDown 호출
 
+        // 점수를 초기화하고 QLabel에 표시
+        ui->Score->setText("0");
+
         // Level QSlider의 현재 값을 QLabel에 표시
         updateLevelLabel(ui->Level->value());
+
+        // Attack 버튼 보이기
+        ui->Attack->setVisible(true); // Attack 버튼을 보이도록 설정
     }
 }
+
+
 
 void MainWindow::moveViewDown()
 {
@@ -114,7 +130,7 @@ void MainWindow::moveViewDown()
         ui->Knife_image->setVisible(true);
 
         // Wood 이미지 회전 시작
-        rotationTimer->start(16);  // 약 60 FPS로 회전 (16ms마다 rotateWoodImage 호출)
+        rotationTimer->start(16);
     }
 }
 
@@ -123,13 +139,13 @@ void MainWindow::rotateWoodImage()
     if (isRotating) {
         // Wood 이미지 회전
         int speed = ui->Level->value();  // QSlider의 현재 값을 가져옴 (1~5)
-        rotationAngle += (5 * speed);    // 회전 각도를 speed에 비례하여 증가시킴
+        rotationAngle += (2.5 * speed);    // 회전 각도 speed
         if (rotationAngle >= 180) {
             rotationAngle = 180; // 180도를 넘지 않도록 설정
             isRotating = false;  // 회전 상태를 멈춤
 
             // 1~3초 사이의 랜덤 시간 생성
-            int randomDelay = QRandomGenerator::global()->bounded(1000, 3000); // 1000ms (1초)부터 3000ms (3초) 사이
+            int randomDelay = QRandomGenerator::global()->bounded(1000, 3000);
             QTimer::singleShot(randomDelay, this, [this]() { // 랜덤 시간 후 다시 회전 시작
                 isRotating = true; // 회전 상태를 다시 활성화
                 rotationAngle = 0; // 각도 초기화
@@ -146,26 +162,93 @@ void MainWindow::updateLevelLabel(int value)
 
 void MainWindow::on_lineEdit_textEdited(const QString &arg1)
 {
-    // 라인 에디트에 텍스트 입력 시 동작 설정
+    playerName = arg1; // QLineEdit에서 입력받은 값을 playerName 변수에 저장
+    ui->Name->setText(playerName); // QLabel에 플레이어 이름 출력
+    std::cout << "Current Player Name: " << playerName.toStdString() << std::endl; // 플레이어 이름 출력
 }
+
 
 void MainWindow::on_horizontalSlider_actionTriggered(int action)
 {
-    // 슬라이더 동작 설정
+
 }
 
 void MainWindow::on_Attack_clicked()
 {
-    if (!isKnifeMoving) { // Knife가 이미 움직이고 있지 않은 경우에만 시작
-        attackCount++;  // 공격 횟수 증가
-        ui->Knife->setText(QString::number(attackCount));  // QLabel에 공격 횟수 표시
+    if (!isKnifeMoving) {
+        attackCount++;
+        ui->Knife->setText(QString::number(attackCount));
 
-        // Knife 애니메이션 시작
-        knifeYPos = ui->Knife_image->y();  // 현재 Knife의 y좌표 가져오기
-        knifeTimer->start(16);  // 약 60 FPS로 moveKnife 호출
-        isKnifeMoving = true; // Knife가 움직이고 있음을 표시
+        knifeYPos = ui->Knife_image->y();
+        knifeTimer->start(16);
+        isKnifeMoving = true;
+
+        if (attackCount >= 5) {
+            // Player 객체 생성
+            Player player(playerName, ui->Level->value(), ui->Score->text().toInt());
+
+            ui->SuccessFail->setText("Fail");
+            ui->SuccessFail->setVisible(true);
+
+            // 파일에서 기존 Player 정보를 불러옴
+            std::vector<Player> players = Player::loadFromFile();
+
+            //v새 Player 객체를 players 벡터에 추가
+            players.push_back(player);
+
+            // 내림차순으로 랭킹을 정렬 (Level 우선, 그 다음 Score)
+            std::sort(players.begin(), players.end(), [](const Player& a, const Player& b) {
+                if (a.getLevel() == b.getLevel()) {
+                    return a.getScore() > b.getScore(); // 점수가 같으면 Score로 비교
+                }
+                return a.getLevel() > b.getLevel(); // Level 우선 비교
+            });
+
+            // 파일에 업데이트된 랭킹을 저장
+            Player::saveRankingToFile(players);
+
+            // 디버깅하기 위해 랭킹을 콘솔에 출력
+            Player::printRanking(players);
+
+            // Level과 Score 초기화
+            ui->Level->setValue(1);
+            ui->Score->setText("0");
+            attackCount = 0;
+            ui->Knife->setText(QString::number(attackCount));
+
+            knifeTimer->stop();
+
+            // 1초 후 초기화
+            QTimer::singleShot(1000, this, [this]() {
+                ui->SuccessFail->setVisible(false);
+                resetToInitialState();
+            });
+        }
     }
 }
+
+
+
+
+void MainWindow::resetToInitialState()
+{
+    xPos = 90;
+    yPos = 110;
+    ui->Startimage->move(xPos, yPos);
+    ui->Knife_image->move(ui->Knife_image->x(), 430);
+    knifeYPos = 430;
+
+    ui->Knife_image->setVisible(false);
+    ui->Attack->setVisible(false);
+    ui->Score->setText("0");
+    attackCount = 0;
+
+    isMoving = false;
+    isKnifeMoving = false;
+
+    ui->Startbutton->setEnabled(true);
+}
+
 
 void MainWindow::moveKnife()
 {
@@ -174,16 +257,16 @@ void MainWindow::moveKnife()
     }
 
     // Knife를 위로 이동
-    knifeYPos -= 10;  // y좌표를 위로 10씩 감소
+    knifeYPos -= 10;
     ui->Knife_image->move(ui->Knife_image->x(), knifeYPos);  // 새로운 위치 설정
 
-    // Knife가 y축 70에 도달하면 초기 위치로 돌아감
+
     if (knifeYPos <= 50) {
-        knifeYPos = 430; // 초기 위치로 재설정
-        ui->Knife_image->move(ui->Knife_image->x(), knifeYPos); // Knife를 초기 위치에 배치
-        knifeTimer->stop();  // 타이머 중지
-        isKnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
-        return;  // 추가적인 처리를 방지하기 위해 함수 종료
+        knifeYPos = 430;
+        ui->Knife_image->move(ui->Knife_image->x(), knifeYPos);
+        knifeTimer->stop();
+        isKnifeMoving = false;
+        return;
     }
 
     // 충돌 체크
@@ -194,14 +277,39 @@ void MainWindow::moveKnife()
     if (knifeRect.bottom() >= woodRect.top() && knifeRect.left() < woodRect.right() && knifeRect.right() > woodRect.left()) {
         ui->Score->setText(QString::number(ui->Score->text().toInt() + 1)); // 점수 증가
 
-        // Knife와 Wood 모두 정지
-        knifeTimer->stop(); // 현재 애니메이션 중지
-        rotationTimer->stop(); // Wood 회전 중지
+        // 점수가 2 이상이면 "Good" 표시
+        if (ui->Score->text().toInt() >= 2) {
+            ui->SuccessFail->setText("Good");
+            ui->SuccessFail->setVisible(true);
 
-        // 1초 후에 다시 애니메이션 시작
+            // Level을 1 증가시키고 최대 값을 넘지 않도록 설정
+            int newLevel = ui->Level->value() + 1;
+            if (newLevel <= ui->Level->maximum()) {
+                ui->Level->setValue(newLevel); // Level을 1 증가시킴
+            }
+
+            // attackCount 초기화
+            attackCount = 0;
+            ui->Knife->setText(QString::number(attackCount));  // QLabel에 공격 횟수 표시
+
+            // 1초 후에 SuccessFail QLabel을 숨김
+            QTimer::singleShot(1000, this, [this]() {
+                ui->SuccessFail->setVisible(false); // 다시 숨김
+            });
+
+            ui->Score->setText("0"); // 점수 초기화
+        }
+
+        // Knife와 Wood 모두 정지
+        knifeTimer->stop();
+        rotationTimer->stop();
+
+        // 1초 후에 다시 시작
         QTimer::singleShot(1000, this, [this]() {
+            ui->Knife_image->setVisible(false);
             knifeYPos = 430; // 초기 위치로 재설정
             ui->Knife_image->move(ui->Knife_image->x(), knifeYPos); // Knife를 초기 위치에 배치
+            ui->Knife_image->setVisible(true);
             knifeTimer->start(16); // 다시 애니메이션 시작
             rotationTimer->start(16); // Wood 회전 재개
             isRotating = true; // Wood 회전 상태 재개
@@ -212,13 +320,22 @@ void MainWindow::moveKnife()
     // Knife가 Wood의 위치에 도달하면 타이머 중지
     if (knifeYPos <= (ui->Wood->y() - ui->Knife_image->height())) {
         knifeTimer->stop();  // 타이머 중지
+        ui->Knife_image->setVisible(false);
         knifeYPos = 430;       // y좌표 초기화
         ui->Knife_image->move(ui->Knife_image->x(), knifeYPos); // Knife를 초기 위치에 배치
+        ui->Knife_image->setVisible(true);
         isKnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
     }
 }
+
 
 void MainWindow::updateKnifeLabel()
 {
     ui->Knife->setText(QString::number(attackCount));  // QLabel에 공격 횟수 표시
 }
+
+void MainWindow::on_ranking_clicked()
+{
+
+}
+

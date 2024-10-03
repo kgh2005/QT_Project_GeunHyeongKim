@@ -80,6 +80,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/player.h",
+			"MU",
+			"EWIEGA46WW/moc_player.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -141,6 +147,11 @@
 		],
 		[
 			"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/player.cpp",
 			"MU",
 			null
 		]

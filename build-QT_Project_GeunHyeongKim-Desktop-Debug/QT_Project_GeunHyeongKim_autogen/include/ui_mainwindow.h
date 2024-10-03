@@ -42,6 +42,8 @@ public:
     QGraphicsView *Knife_image;
     QPushButton *Attack;
     QLabel *Score;
+    QLabel *SuccessFail;
+    QPushButton *ranking;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -129,6 +131,18 @@ public:
         Score->setStyleSheet(QString::fromUtf8("font: 25 16pt \"URW Bookman\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(7, 35, 61);"));
+        SuccessFail = new QLabel(centralwidget);
+        SuccessFail->setObjectName(QString::fromUtf8("SuccessFail"));
+        SuccessFail->setGeometry(QRect(170, 280, 161, 100));
+        SuccessFail->setStyleSheet(QString::fromUtf8("font: 25 25pt \"URW Bookman\";\n"
+"color: rgb(255, 255, 255);\n"
+"background: transparent;"));
+        ranking = new QPushButton(centralwidget);
+        ranking->setObjectName(QString::fromUtf8("ranking"));
+        ranking->setGeometry(QRect(530, 510, 89, 25));
+        ranking->setStyleSheet(QString::fromUtf8("font: 25 10pt \"URW Bookman\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(35, 31, 31);"));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -151,6 +165,8 @@ public:
         levelSlider->setText(QString());
         Attack->setText(QCoreApplication::translate("MainWindow", "Attack", nullptr));
         Score->setText(QString());
+        SuccessFail->setText(QString());
+        ranking->setText(QCoreApplication::translate("MainWindow", "Ranking", nullptr));
     } // retranslateUi
 
 };
