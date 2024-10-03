@@ -3,6 +3,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 #include <iostream>
+#include <QDesktopServices>
+#include <QUrl>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
     , isKnifeMoving(false) // Knife 애니메이션 상태
 {
     ui->setupUi(this);
+
+    ui->rankList->setVisible(false);
 
     playerName = "";
 
@@ -110,9 +115,11 @@ void MainWindow::on_Startbutton_clicked()
 
         // Attack 버튼 보이기
         ui->Attack->setVisible(true); // Attack 버튼을 보이도록 설정
+
+        // rankList QLabel 숨기기
+        ui->rankList->setVisible(false);  // 게임 시작 시 숨김
     }
 }
-
 
 
 void MainWindow::moveViewDown()
@@ -120,7 +127,6 @@ void MainWindow::moveViewDown()
     // QGraphicsView의 y좌표를 변경하여 아래로 이동
     yPos += 1;  // y 좌표를 1만큼 아래로 이동
     ui->Startimage->move(xPos, yPos);  // QGraphicsView의 새로운 위치 설정
-
     // Startimage가 화면 하단에 도달하면 Wood와 Knife 이미지를 나타냄
     if (yPos >= height()) {
         timer->stop();  // 타이머 중지
@@ -183,17 +189,18 @@ void MainWindow::on_Attack_clicked()
         knifeTimer->start(16);
         isKnifeMoving = true;
 
-        if (attackCount >= 5) {
+        if (attackCount > 5) {
             // Player 객체 생성
             Player player(playerName, ui->Level->value(), ui->Score->text().toInt());
 
             ui->SuccessFail->setText("Fail");
             ui->SuccessFail->setVisible(true);
+            ui->rankList->setVisible(true);  // Fail 시 rankList 보이기
 
             // 파일에서 기존 Player 정보를 불러옴
             std::vector<Player> players = Player::loadFromFile();
 
-            //v새 Player 객체를 players 벡터에 추가
+            // 새 Player 객체를 players 벡터에 추가
             players.push_back(player);
 
             // 내림차순으로 랭킹을 정렬 (Level 우선, 그 다음 Score)
@@ -207,8 +214,12 @@ void MainWindow::on_Attack_clicked()
             // 파일에 업데이트된 랭킹을 저장
             Player::saveRankingToFile(players);
 
-            // 디버깅하기 위해 랭킹을 콘솔에 출력
-            Player::printRanking(players);
+            // rankList QLabel에 랭킹을 표시
+            QString rankingText;
+            for (const auto& player : players) {
+                rankingText += player.getRankingString() + "\n\n\n";
+            }
+            ui->rankList->setText(rankingText); // QLabel에 랭킹 텍스트 추가
 
             // Level과 Score 초기화
             ui->Level->setValue(1);
@@ -226,6 +237,7 @@ void MainWindow::on_Attack_clicked()
         }
     }
 }
+
 
 
 
@@ -334,8 +346,9 @@ void MainWindow::updateKnifeLabel()
     ui->Knife->setText(QString::number(attackCount));  // QLabel에 공격 횟수 표시
 }
 
-void MainWindow::on_ranking_clicked()
+
+
+void MainWindow::on_rankList_linkActivated(const QString &link)
 {
 
 }
-

@@ -1100,7 +1100,12 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/mainwindow.cpp.o: /home/kgh/GITHUB/QT_Pr
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QDesktopServices \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qdesktopservices.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
 
 CMakeFiles/QT_Project_GeunHyeongKim.dir/player.cpp.o: /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/player.cpp \
   /usr/include/stdc-predef.h \
@@ -1403,6 +1408,16 @@ CMakeFiles/QT_Project_GeunHyeongKim.dir/player.cpp.o: /home/kgh/GITHUB/QT_Projec
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile:
 
 /home/kgh/GITHUB/QT_Project_GeunHyeongKim/QT_Project_GeunHyeongKim/player.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qdesktopservices.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QDesktopServices:
 
 /usr/include/c++/11/bits/random.h:
 

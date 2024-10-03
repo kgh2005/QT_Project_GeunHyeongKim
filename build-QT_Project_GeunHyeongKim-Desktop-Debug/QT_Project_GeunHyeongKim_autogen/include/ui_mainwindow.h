@@ -43,7 +43,7 @@ public:
     QPushButton *Attack;
     QLabel *Score;
     QLabel *SuccessFail;
-    QPushButton *ranking;
+    QLabel *rankList;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -137,12 +137,11 @@ public:
         SuccessFail->setStyleSheet(QString::fromUtf8("font: 25 25pt \"URW Bookman\";\n"
 "color: rgb(255, 255, 255);\n"
 "background: transparent;"));
-        ranking = new QPushButton(centralwidget);
-        ranking->setObjectName(QString::fromUtf8("ranking"));
-        ranking->setGeometry(QRect(530, 510, 89, 25));
-        ranking->setStyleSheet(QString::fromUtf8("font: 25 10pt \"URW Bookman\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(35, 31, 31);"));
+        rankList = new QLabel(centralwidget);
+        rankList->setObjectName(QString::fromUtf8("rankList"));
+        rankList->setGeometry(QRect(50, 30, 400, 500));
+        rankList->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: rgb(61, 56, 70);"));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -166,7 +165,7 @@ public:
         Attack->setText(QCoreApplication::translate("MainWindow", "Attack", nullptr));
         Score->setText(QString());
         SuccessFail->setText(QString());
-        ranking->setText(QCoreApplication::translate("MainWindow", "Ranking", nullptr));
+        rankList->setText(QString());
     } // retranslateUi
 
 };

@@ -30,10 +30,7 @@ private slots:
     void moveKnife();                      // Knife 이동
     void updateKnifeLabel();               // Knife QLabel 업데이트 함수
     void resetToInitialState();
-
-    void on_pushButton_clicked();
-
-    void on_ranking_clicked();
+    void on_rankList_linkActivated(const QString &link);
 
 private:
     Ui::MainWindow *ui;                   // UI 객체 포인터

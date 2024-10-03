@@ -11,10 +11,17 @@ using namespace std;
 Player::Player(const QString& name, int level, int score)
     : name(name), level(level), score(score) {}
 
+QString Player::getRankingString() const {
+    return QString("Player: %1, Level: %2, Score: %3")
+        .arg(name)
+        .arg(level)
+        .arg(score);
+}
+
 // 파일에서 Player 정보를 불러오는 함수
 std::vector<Player> Player::loadFromFile() {
     std::vector<Player> players;
-    QFile file("player_info.txt");
+    QFile file("ranking.txt");
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&file);
@@ -36,7 +43,7 @@ std::vector<Player> Player::loadFromFile() {
 
 // 랭킹을 파일에 저장하는 함수
 void Player::saveRankingToFile(const std::vector<Player>& players) {
-    QFile file("player_info.txt");
+    QFile file("ranking.txt");
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&file);
