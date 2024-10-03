@@ -12,10 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , xPos(90)  // 초기 x 좌표
     , yPos(110) // 초기 y 좌표
-    , isMoving(false)  // 현재 이동 중인지 여부를 나타내는 변수
+    , Move(false)  // 현재 이동 중인지 여부를 나타내는 변수
     , rotationAngle(0) // 회전 각도
     , knifeYPos(0)     // Knife 초기 y 좌표 설정
-    , isRotating(true)  // 회전 상태
+    , Turn(true)  // 회전 상태
     , attackCount(0)    // Attack 버튼 클릭 횟수 초기화
     , isKnifeMoving(false) // Knife 애니메이션 상태
 {
@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     rotationTimer = new QTimer(this);
     connect(rotationTimer, &QTimer::timeout, this, &MainWindow::rotateWoodImage);
 
-    // Knife 애니메이션 타이머 초기화
+    // Knife 타이머 초기화
     knifeTimer = new QTimer(this);
     connect(knifeTimer, &QTimer::timeout, this, &MainWindow::moveKnife); // moveKnife와 연결
 
@@ -54,12 +54,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Startimage->move(xPos, yPos);  // 지정된 위치로 이동
 
     // Wood QGraphicsView에 대한 설정
-    sceneWood = new QGraphicsScene(this);  // Wood를 위한 새로운 씬 생성
-    ui->Wood->setScene(sceneWood);  // Wood QGraphicsView에 씬 설정
+    sceneWood = new QGraphicsScene(this);  // Wood
+    ui->Wood->setScene(sceneWood);  // Wood QGraphicsView
 
     // Knife_image QGraphicsView에 대한 설정
-    sceneKnife = new QGraphicsScene(this);  // Knife_image를 위한 새로운 씬 생성
-    ui->Knife_image->setScene(sceneKnife);  // Knife QGraphicsView에 씬 설정
+    sceneKnife = new QGraphicsScene(this);  // Knife_image
+    ui->Knife_image->setScene(sceneKnife);  // Knife QGraphicsView
 
     // Wood QGraphicsView에서 스크롤바 숨기기
     ui->Wood->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -103,8 +103,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_Startbutton_clicked()
 {
     // 버튼 클릭 시 QGraphicsView 이동 시작
-    if (!isMoving) {
-        isMoving = true;  // 이동 중임을 표시
+    if (!Move) {
+        Move = true;  // 이동 중임을 표시
         timer->start(1);  // 1ms마다 moveViewDown 호출
 
         // 점수를 초기화하고 QLabel에 표시
@@ -130,7 +130,7 @@ void MainWindow::moveViewDown()
     // Startimage가 화면 하단에 도달하면 Wood와 Knife 이미지를 나타냄
     if (yPos >= height()) {
         timer->stop();  // 타이머 중지
-        isMoving = false;  // 이동 중 아님으로 설정
+        Move = false;  // 이동 중 아님으로 설정
 
         ui->Wood->setVisible(true);
         ui->Knife_image->setVisible(true);
@@ -142,18 +142,18 @@ void MainWindow::moveViewDown()
 
 void MainWindow::rotateWoodImage()
 {
-    if (isRotating) {
+    if (Turn) {
         // Wood 이미지 회전
         int speed = ui->Level->value();  // QSlider의 현재 값을 가져옴 (1~5)
         rotationAngle += (2.5 * speed);    // 회전 각도 speed
         if (rotationAngle >= 180) {
             rotationAngle = 180; // 180도를 넘지 않도록 설정
-            isRotating = false;  // 회전 상태를 멈춤
+            Turn = false;  // 회전 상태를 멈춤
 
             // 1~3초 사이의 랜덤 시간 생성
             int randomDelay = QRandomGenerator::global()->bounded(1000, 3000);
             QTimer::singleShot(randomDelay, this, [this]() { // 랜덤 시간 후 다시 회전 시작
-                isRotating = true; // 회전 상태를 다시 활성화
+                Turn = true; // 회전 상태를 다시 활성화
                 rotationAngle = 0; // 각도 초기화
             });
         }
@@ -255,7 +255,7 @@ void MainWindow::resetToInitialState()
     ui->Score->setText("0");
     attackCount = 0;
 
-    isMoving = false;
+    Move = false;
     isKnifeMoving = false;
 
     ui->Startbutton->setEnabled(true);
@@ -324,7 +324,7 @@ void MainWindow::moveKnife()
             ui->Knife_image->setVisible(true);
             knifeTimer->start(16); // 다시 애니메이션 시작
             rotationTimer->start(16); // Wood 회전 재개
-            isRotating = true; // Wood 회전 상태 재개
+            Turn = true; // Wood 회전 상태 재개
             isKnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
         });
     }

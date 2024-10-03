@@ -5,7 +5,7 @@
 #include <QGraphicsScene>
 #include <QTimer>
 #include <QGraphicsPixmapItem>
-#include <QLabel> // QLabel 추가
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -42,15 +42,16 @@ private:
     QTimer *rotationTimer;                 // Wood 회전 타이머
     QTimer *knifeTimer;                    // Knife 위한 타이머
     QGraphicsPixmapItem *negativeImageItem; // Wood 이미지 아이템
+
     int xPos;                              // QGraphicsView의 초기 x 좌표
     int yPos;                              // QGraphicsView의 초기 y 좌표
-    bool isMoving;                         // 현재 이동 중인지 여부를 나타내는 변수
+    bool Move;                         // 현재 이동 중인지 여부를 나타내는 변수
     int rotationAngle;                     // Wood의 회전 각도
     int knifeYPos;                         // Knife의 y 좌표
-    bool isRotating;                       // 회전 상태를 위한 변수
+    bool Turn;                       // 회전 상태를 위한 변수
     int attackCount;                       // Attack 버튼 클릭 횟수
     bool isKnifeMoving;                    // Knife 상태를 나타내는 변수
-    int score;                             // 현재 점수 (충돌 횟수)
+    int score;                             // 현재 점수
 };
 
 #endif // MAINWINDOW_H
