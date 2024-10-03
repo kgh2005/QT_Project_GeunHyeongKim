@@ -50,7 +50,7 @@ private:
     int knifeYPos;                         // Knife의 y 좌표
     bool Turn;                       // 회전 상태를 위한 변수
     int attackCount;                       // Attack 버튼 클릭 횟수
-    bool isKnifeMoving;                    // Knife 상태를 나타내는 변수
+    bool KnifeMoving;                    // Knife 상태를 나타내는 변수
     int score;                             // 현재 점수
 };
 

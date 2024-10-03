@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     , knifeYPos(0)     // Knife 초기 y 좌표 설정
     , Turn(true)  // 회전 상태
     , attackCount(0)    // Attack 버튼 클릭 횟수 초기화
-    , isKnifeMoving(false) // Knife 애니메이션 상태
+    , KnifeMoving(false) // Knife 애니메이션 상태
 {
     ui->setupUi(this);
 
@@ -124,10 +124,9 @@ void MainWindow::on_Startbutton_clicked()
 
 void MainWindow::moveViewDown()
 {
-    // QGraphicsView의 y좌표를 변경하여 아래로 이동
-    yPos += 1;  // y 좌표를 1만큼 아래로 이동
-    ui->Startimage->move(xPos, yPos);  // QGraphicsView의 새로운 위치 설정
-    // Startimage가 화면 하단에 도달하면 Wood와 Knife 이미지를 나타냄
+    // 아래로 이동
+    yPos += 1;
+    ui->Startimage->move(xPos, yPos);
     if (yPos >= height()) {
         timer->stop();  // 타이머 중지
         Move = false;  // 이동 중 아님으로 설정
@@ -168,7 +167,7 @@ void MainWindow::updateLevelLabel(int value)
 
 void MainWindow::on_lineEdit_textEdited(const QString &arg1)
 {
-    playerName = arg1; // QLineEdit에서 입력받은 값을 playerName 변수에 저장
+    playerName = arg1; // 입력받은 값을 playerName 변수에 저장
     ui->Name->setText(playerName); // QLabel에 플레이어 이름 출력
     std::cout << "Current Player Name: " << playerName.toStdString() << std::endl; // 플레이어 이름 출력
 }
@@ -181,13 +180,13 @@ void MainWindow::on_horizontalSlider_actionTriggered(int action)
 
 void MainWindow::on_Attack_clicked()
 {
-    if (!isKnifeMoving) {
+    if (!KnifeMoving) {
         attackCount++;
         ui->Knife->setText(QString::number(attackCount));
 
         knifeYPos = ui->Knife_image->y();
         knifeTimer->start(16);
-        isKnifeMoving = true;
+        KnifeMoving = true;
 
         if (attackCount > 5) {
             // Player 객체 생성
@@ -256,7 +255,7 @@ void MainWindow::resetToInitialState()
     attackCount = 0;
 
     Move = false;
-    isKnifeMoving = false;
+    KnifeMoving = false;
 
     ui->Startbutton->setEnabled(true);
 }
@@ -264,7 +263,7 @@ void MainWindow::resetToInitialState()
 
 void MainWindow::moveKnife()
 {
-    if (!isKnifeMoving) {
+    if (!KnifeMoving) {
         return; // Knife가 움직이고 있지 않으면 아무것도 하지 않음
     }
 
@@ -277,7 +276,7 @@ void MainWindow::moveKnife()
         knifeYPos = 430;
         ui->Knife_image->move(ui->Knife_image->x(), knifeYPos);
         knifeTimer->stop();
-        isKnifeMoving = false;
+        KnifeMoving = false;
         return;
     }
 
@@ -325,7 +324,7 @@ void MainWindow::moveKnife()
             knifeTimer->start(16); // 다시 애니메이션 시작
             rotationTimer->start(16); // Wood 회전 재개
             Turn = true; // Wood 회전 상태 재개
-            isKnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
+            KnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
         });
     }
 
@@ -336,7 +335,7 @@ void MainWindow::moveKnife()
         knifeYPos = 430;       // y좌표 초기화
         ui->Knife_image->move(ui->Knife_image->x(), knifeYPos); // Knife를 초기 위치에 배치
         ui->Knife_image->setVisible(true);
-        isKnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
+        KnifeMoving = false; // Knife가 더 이상 움직이지 않음을 표시
     }
 }
 
