@@ -15,23 +15,6 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-private slots:
-    void on_Startbutton_clicked();        // Start 버튼 클릭
-    void moveViewDown();                  // QGraphicsView를 아래로 이동
-    void rotateWoodImage();               // Wood 이미지를 회전
-    void updateLevelLabel(int value);     // 슬라이더 값 업데이트
-    void on_lineEdit_textEdited(const QString &arg1);
-    void on_horizontalSlider_actionTriggered(int action);
-    void on_Attack_clicked();              // Attack 버튼 클릭 시 호출
-    void moveKnife();                      // Knife 이동
-    void updateKnifeLabel();               // Knife QLabel 업데이트 함수
-    void resetToInitialState();
-    void on_rankList_linkActivated(const QString &link);
-
 private:
     Ui::MainWindow *ui;                   // UI 객체 포인터
     QGraphicsScene *scene;
@@ -52,6 +35,23 @@ private:
     int attackCount;                       // Attack 버튼 클릭 횟수
     bool KnifeMoving;                    // Knife 상태를 나타내는 변수
     int score;                             // 현재 점수
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private slots:
+    void on_Startbutton_clicked();        // Start 버튼 클릭
+    void moveViewDown();                  // QGraphicsView를 아래로 이동
+    void rotateWoodImage();               // Wood 이미지를 회전
+    void updateLevelLabel(int value);     // 슬라이더 값 업데이트
+    void on_lineEdit_textEdited(const QString &arg1);
+    void on_horizontalSlider_actionTriggered(int action);
+    void on_Attack_clicked();              // Attack 버튼 클릭 시 호출
+    void moveKnife();                      // Knife 이동
+    void updateKnifeLabel();               // Knife QLabel 업데이트 함수
+    void resetToInitialState();
+    void on_rankList_linkActivated(const QString &link);
 };
 
 #endif // MAINWINDOW_H

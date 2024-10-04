@@ -1,10 +1,9 @@
+lee,3,1
 dzsflk,2,1
 skdajfg,2,1
 sdasdf,2,1
 ㄱㅈㄷ,2,1
 dsf,2,0
-leo,1,1
-sdf,1,1
-ㄴㄹ ㅇ  ,1,1
-,1,1
-dsfaf,1,1
+kgh,2,0
+kim,1,1
+kim2,1,1

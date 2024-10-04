@@ -197,9 +197,9 @@ void MainWindow::on_Attack_clicked()
             ui->rankList->setVisible(true);  // Fail 시 rankList 보이기
 
             // 파일에서 기존 Player 정보를 불러옴
-            std::vector<Player> players = Player::loadFromFile();
+            std::vector<Player> players = Player::loadFile();
 
-            // 새 Player 객체를 players 벡터에 추가
+            // Player 객체를 players 벡터에 추가
             players.push_back(player);
 
             // 내림차순으로 랭킹을 정렬 (Level 우선, 그 다음 Score)
@@ -211,7 +211,7 @@ void MainWindow::on_Attack_clicked()
             });
 
             // 파일에 업데이트된 랭킹을 저장
-            Player::saveRankingToFile(players);
+            Player::saveRankingFile(players);
 
             // rankList QLabel에 랭킹을 표시
             QString rankingText;

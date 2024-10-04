@@ -19,7 +19,7 @@ QString Player::getRankingString() const {
 }
 
 // 파일에서 Player 정보를 불러오는 함수
-std::vector<Player> Player::loadFromFile() {
+std::vector<Player> Player::loadFile() {
     std::vector<Player> players;
     QFile file("ranking.txt");
 
@@ -42,7 +42,7 @@ std::vector<Player> Player::loadFromFile() {
 }
 
 // 랭킹을 파일에 저장하는 함수
-void Player::saveRankingToFile(const std::vector<Player>& players) {
+void Player::saveRankingFile(const std::vector<Player>& players) {
     QFile file("ranking.txt");
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
